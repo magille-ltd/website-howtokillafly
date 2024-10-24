@@ -40,15 +40,17 @@ export function Layout({ children }) {
           backgroundBlendMode: 'overlay', // More dramatic blend mode
         }}
       >
-        <div className="text-center py-8">
-          <h1 className="text-5xl font-extrabold mb-8 text-yellow-400 drop-shadow-lg">🪰🔥 Tactical Fly Elimination Directory</h1>
-          <p className="text-2xl mb-6 text-gray-300">
-            Welcome to your ultimate guide for outsmarting and obliterating that pesky fly with style and a smile.
-          </p>
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center py-8">
+            <h1 className="text-5xl font-extrabold mb-8 text-yellow-400 drop-shadow-lg">🪰🔥 Tactical Fly Elimination Directory</h1>
+            <p className="text-2xl mb-6 text-gray-300">
+              Welcome to your ultimate guide for outsmarting and obliterating that pesky fly with style and a smile.
+            </p>
+          </div>
+          {children}
+          <ScrollRestoration />
+          <Scripts />
         </div>
-        {children}
-        <ScrollRestoration />
-        <Scripts />
       </body>
     </html>
   );

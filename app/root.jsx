@@ -44,7 +44,7 @@ export function Layout({ children }) {
           <div className="text-center py-8">
             <h1 className="text-5xl font-extrabold mb-8 text-yellow-400 drop-shadow-lg">🪰🔥 Tactical Fly Elimination Directory</h1>
             <p className="text-2xl mb-6 text-gray-300">
-              Welcome to your ultimate guide for outsmarting and obliterating that pesky fly with style and a smile.
+              Welcome to your ultimate guide for outsmarting and obliterating that pesky f* with style and a smile.
             </p>
           </div>
           {children}

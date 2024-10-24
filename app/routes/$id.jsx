@@ -12,7 +12,7 @@ export default function StrategyDetail() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-start text-white min-h-screen">
+    <div className="flex flex-col items-center justify-start text-white">
       <div className="text-center py-8">
         <h1 className="text-5xl font-extrabold mb-8 text-yellow-400 drop-shadow-lg">{strategy.name}</h1>
         <p className="text-2xl mb-6 text-gray-300">{strategy.description}</p>

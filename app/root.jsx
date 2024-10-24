@@ -29,6 +29,7 @@ export function Layout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
+        <link rel="icon" href="/favicon" type="image/png" />
       </head>
       <body
         className="flex flex-col items-center justify-start text-white min-h-screen"

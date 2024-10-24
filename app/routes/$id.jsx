@@ -1,5 +1,5 @@
 import { useParams, Link } from "@remix-run/react";
-import flyEliminationStrategies from './flyStrategies';
+import flyEliminationStrategies from '../flyStrategies';
 
 export default function StrategyDetail() {
   const params = useParams();

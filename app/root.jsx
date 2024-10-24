@@ -30,7 +30,21 @@ export function Layout({ children }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body
+        className="flex flex-col items-center justify-start text-white min-h-screen"
+        style={{
+          backgroundColor: '#1a1a1a', // Darker background for contrast
+          backgroundImage: 'url(/3.png)',
+          backgroundPosition: 'center',
+          backgroundBlendMode: 'overlay', // More dramatic blend mode
+        }}
+      >
+        <div className="text-center py-8">
+          <h1 className="text-5xl font-extrabold mb-8 text-yellow-400 drop-shadow-lg">🪰🔥 Tactical Fly Elimination Directory</h1>
+          <p className="text-2xl mb-6 text-gray-300">
+            Welcome to your ultimate guide for outsmarting and obliterating that pesky fly with style and a smile.
+          </p>
+        </div>
         {children}
         <ScrollRestoration />
         <Scripts />

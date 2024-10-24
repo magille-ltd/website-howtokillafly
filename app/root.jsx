@@ -6,6 +6,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import SocialShare from './components/SocialShare';
 import "./tailwind.css";
 
 export const links = () => [
@@ -40,7 +41,7 @@ export function Layout({ children }) {
           backgroundBlendMode: 'overlay', // More dramatic blend mode
         }}
       >
-        <div className="max-w-3xl mx-auto flex flex-col justify-center min-h-screen">
+        <div className="max-w-3xl mx-auto flex flex-col justify-center min-h-screen px-4 py-6">
           <div className="text-center py-8">
             <h1 className="text-5xl font-extrabold mb-8 text-yellow-400 drop-shadow-lg">🪰🔥 Tactical Fly Elimination Directory</h1>
             <p className="text-2xl mb-6 text-gray-300">
@@ -48,6 +49,12 @@ export function Layout({ children }) {
             </p>
           </div>
           {children}
+          <SocialShare />
+          <div className="text-center py-8">
+            <p className="text-2xl mb-6 text-gray-300">
+              &copy; {new Date().getFullYear()} Tactical Fly Elimination Directory. All rights reserved.
+            </p>
+          </div>
           <ScrollRestoration />
           <Scripts />
         </div>

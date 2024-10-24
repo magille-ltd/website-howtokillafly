@@ -10,7 +10,7 @@ export const meta = () => {
 
 export default function Index() {
   return (
-    <div className="flex flex-col items-center justify-start text-white px-4 pb-12">
+    <div className="flex flex-col items-center justify-start text-white pb-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {flyEliminationStrategies.map((strategy, index) => (
             <Link to={`/${strategy.id}`} key={index} className="block h-full">

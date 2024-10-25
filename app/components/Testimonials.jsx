@@ -1,7 +1,7 @@
 
 
 function Testimonials() {
-  return <div className="w-full max-w-2xl space-y-6">
+  return <div className="max-w-2xl space-y-6 max-w-3xl mx-auto">
     <div className="bg-gray-800 bg-opacity-75 p-6 rounded-lg">
       <div className="flex mb-2">
         {[...Array(5)].map((_, i) => (

@@ -32,7 +32,7 @@ export default function Index() {
             ))}
           </div>
           <p className="text-gray-300 mb-2">
-            "Yesterday I was trying to get work done and one of these pesky f* bothered my deep work and set me back at least three hours. I finally managed to kill that f* after a long hunt. I love this directory, it is a testament to me winning that battle."
+            "Yesterday I was trying to get work done and one of these pesky f* bothered my deep work and set me back at least three hours. I finally managed to kill that f* after a long hunt. I love this directory, it is a testament to me winning that long arduous battle. 🪖"
           </p>
           <p className="text-yellow-400 font-bold">- Me</p>
         </div>
@@ -72,7 +72,7 @@ export default function Index() {
             </svg>
           </div>
           <p className="text-gray-300 mb-2">
-            "I knew I had to do something. Bed time was approaching and I knew it would land on my face throughout the night. I just knew, if I were to type howtokillafly.com in my browser I would find a solution! And I did! I just knew. Five stars when you add more strategies so I can know more!"
+            "I knew I had to do something. Bed time was approaching and I knew it would land on my face throughout the night. I just knew, if I were to type howtokillafly.com in my browser I would find a solution! And I did! I just knew. Five stars when you add more strategies so I can knew more!"
           </p>
           <p className="text-yellow-400 font-bold">- Probably You</p>
           <div className="mt-4 border-t border-gray-700 pt-4">
@@ -95,7 +95,7 @@ export default function Index() {
             ))}
           </div>
           <p className="text-gray-300 mb-2">
-            "I like diarrhea. I like how I can get it when a fly first visits the garbage shed or eats dog 💩 on the street, and then lands on my food. Please don't take that from me. One starred!!!"
+            "I like diarrhea. I like how I can get it when a fly first visits the garbage bin or eats dog 💩 on the street, and then lands on my food. Please don't take that from me. One starred!!!"
           </p>
           <p className="text-yellow-400 font-bold">- Fly Soy Boy</p>
           <div className="mt-4 border-t border-gray-700 pt-4">

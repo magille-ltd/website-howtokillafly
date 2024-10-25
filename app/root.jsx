@@ -35,8 +35,8 @@ export function Layout({ children }) {
       <body
         className="flex flex-col items-center justify-start text-white min-h-screen"
         style={{
-          backgroundColor: '#1a1a1a', // Darker background for contrast
-          backgroundImage: 'url(/3.png)',
+          backgroundColor: '#273417', // Darker background for contrast
+          backgroundImage: 'url(/fly4.png)',
           backgroundPosition: 'center',
           backgroundBlendMode: 'overlay', // More dramatic blend mode
         }}

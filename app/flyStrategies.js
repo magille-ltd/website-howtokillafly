@@ -1,3 +1,5 @@
+// for inspiration: https://en.wikipedia.org/wiki/Fly-killing_device
+
 const flyEliminationStrategies = [
   {
     id: "fly-swatter",

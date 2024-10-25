@@ -5,7 +5,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-
+import { Analytics } from "@vercel/analytics/react"
 import SocialShare from './components/SocialShare';
 import "./tailwind.css";
 
@@ -57,6 +57,7 @@ export function Layout({ children }) {
           </div>
           <ScrollRestoration />
           <Scripts />
+          <Analytics />
         </div>
       </body>
     </html>

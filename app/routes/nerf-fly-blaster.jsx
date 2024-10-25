@@ -1,6 +1,32 @@
 import { useParams, Link } from "@remix-run/react";
 import flyEliminationStrategies from '../flyStrategies';
 
+export const meta = ({ data }) => {
+  if (!data || !data.strategy) {
+    return [
+      { title: "Strategy Not Found" },
+      { name: "description", content: "The requested fly elimination strategy could not be found." },
+    ];
+  }
+
+  return [
+    { title: `${data.strategy.name} - Fly Elimination Strategy` },
+    { name: "description", content: data.strategy.description },
+  ];
+};
+
+export const loader = async ({ params }) => {
+  const id = "nerf-fly-blaster";
+  const strategy = flyEliminationStrategies.find(s => s.id === id);
+
+  if (!strategy) {
+    throw new Response("Not Found", { status: 404 });
+  }
+
+  return { strategy };
+};
+
+
 export default function StrategyDetail() {
   //const params = useParams();
   //const { id } = params;
@@ -27,8 +53,8 @@ export default function StrategyDetail() {
 
         <img src="/disruptor.png" alt="Nerf Blaster" className="w-full h-auto rounded-md" />
 
-        <p className="text-gray-300 mb-6">
-        Another great option is the Elite 2.0 series Slyshot:
+        <p className="text-gray-300 mb-0 mt-8">
+        Another great option is the Elite 2.0 series Slyshot paired with X-Shot ammo:
         </p>
 
         <img src="/slyshot.png" alt="Nerf Blaster" className="w-full h-auto rounded-md" />
@@ -60,7 +86,7 @@ export default function StrategyDetail() {
         </p>
 
         <p className="text-gray-300 mb-6">
-        PS. If you score a direct hit on your house fly friend while he's hanging upside down from the roof, be prepared to get him down somehow. It will be difficult to clean all the leftover shit once it dries up. The only reason we have a picture of Robert is because he is still there.
+        PS. If you score a direct hit on your house fly friend while he's hanging upside down from <i>your</i> roof, be prepared to get him down somehow. It will be difficult to clean all the leftover shit once it dries up. The only reason we have a picture of Robert is because he is still there.
         </p>
 
         <Link to="/" className="text-blue-500 hover:underline mt-4 text-lg">Back to Index</Link>

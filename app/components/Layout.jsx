@@ -11,7 +11,7 @@ export default function Layout({ children }) {
       <div className="text-center py-8 max-w-3xl mx-auto">
         <div className="text-5xl font-military mb-8 text-yellow-400 drop-shadow-lg">
           <Link to="/">
-            <span className="text-6xl">🪰🔥</span><br/>
+            <span className="text-5xl">🪰🔥</span><br/>
             <h1 className="">
               <GradientText>Tactical Fly Elimination Directory</GradientText>
             </h1>

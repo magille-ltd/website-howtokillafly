@@ -16,7 +16,7 @@ export default function BlogPostCard({ post, topReaction }) {
       )}
       <h3 className="text-xl font-semibold mb-2 text-yellow-400 mr-1">
         <Link to={`/blog/${post.id}`} className="hover:underline">
-          {post.title}
+          <GradientText style="default">{post.title}</GradientText>
         </Link>
       </h3>
       <p className="text-gray-300 mb-4">{post.excerpt}</p>

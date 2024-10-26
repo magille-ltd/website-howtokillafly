@@ -121,7 +121,6 @@ const blogPosts = [
     excerpt: "Learn about fly behavior to improve your fly control strategies and maybe win a staring contest.",
     content: (
       <>
-        <h2 className="text-2xl font-bold mb-4 text-yellow-400">Fly Behavior: Understanding Your Buzzing Nemesis</h2>
         <p className="text-gray-300 mb-4">
           Ever feel like flies are plotting against you? Well, they're not (probably). But understanding their behavior can help you outsmart these tiny terrors. Let's dive into the fascinating world of fly facts!
         </p>
@@ -158,7 +157,6 @@ const blogPosts = [
     excerpt: "Learn about homemade fly trap methods that don't require an engineering degree.",
     content: (
       <>
-        <h2 className="text-2xl font-bold mb-4 text-yellow-400">Simple DIY Fly Traps: Outsmart the Winged Menace</h2>
         <p className="text-gray-300 mb-4">
           Tired of playing whack-a-fly? Let's explore some DIY fly traps that'll have those pesky insects checking into the Hotel California of the insect world - they can check in, but they can't check out!
         </p>
@@ -193,7 +191,6 @@ const blogPosts = [
     excerpt: "Explore the swat-tastic journey of our favorite fly-fighting tool.",
     content: (
       <>
-        <h2 className="text-2xl font-bold mb-4 text-yellow-400">A Brief Look at Fly Swatter History: From Hands to High-Tech</h2>
         <p className="text-gray-300 mb-4">
           The humble fly swatter - a tool so simple, yet so effective. Let's take a swat at its history, shall we?
         </p>
@@ -229,7 +226,6 @@ const blogPosts = [
     excerpt: "Discover the serious health and economic consequences of our pesky flying foes.",
     content: (
       <>
-        <h2 className="text-2xl font-bold mb-4 text-yellow-400">The Dark Side of Flies: Diseases and Economic Impact</h2>
         <p className="text-gray-300 mb-4">
           While flies might seem like mere nuisances, they can pose serious health risks and cause significant economic damage. Let's explore the not-so-fun facts about our buzzing adversaries.
         </p>
@@ -287,7 +283,6 @@ const blogPosts = [
     excerpt: "Dive into the fascinating world of fly anatomy and explore the diversity of fly species.",
     content: (
       <>
-        <h2 className="text-2xl font-bold mb-4 text-yellow-400">Fly Anatomy 101: Getting to Know Our Tiny Nemeses</h2>
         <p className="text-gray-300 mb-4">
           Flies may be small, but their anatomy is surprisingly complex. Let's take a closer look at these insects and explore some of the diverse species within the order Diptera.
         </p>
@@ -369,7 +364,6 @@ const blogPosts = [
     excerpt: "Discover effective strategies to combat flies in every season, from spring swarms to winter stragglers.",
     content: (
       <>
-        <h2 className="text-2xl font-bold mb-4 text-yellow-400">Seasonal Fly Control: Winning the Year-Round Battle</h2>
         <p className="text-gray-300 mb-4">
           Just when you think you've got flies under control, the seasons change and so do their tactics. Let's explore how to keep these pesky insects at bay throughout the year.
         </p>
@@ -421,7 +415,6 @@ const blogPosts = [
     excerpt: "Explore the surprising ecological roles of flies and why they're more than just pests.",
     content: (
       <>
-        <h2 className="text-2xl font-bold mb-4 text-yellow-400">The Environmental Impact of Flies: Not All Bad News</h2>
         <p className="text-gray-300 mb-4">
           While flies often get a bad rap, these insects play crucial roles in our ecosystems. Let's take a balanced look at the environmental impact of flies.
         </p>
@@ -477,7 +470,6 @@ const blogPosts = [
     excerpt: "Learn tailored strategies for managing flies in residential, agricultural, and industrial environments.",
     content: (
       <>
-        <h2 className="text-2xl font-bold mb-4 text-yellow-400">Fly Control in Different Settings: Home, Farm, and Industry</h2>
         <p className="text-gray-300 mb-4">
           Flies don't discriminate when it comes to where they'll set up shop. Let's explore effective fly control strategies for various environments.
         </p>
@@ -533,7 +525,6 @@ const blogPosts = [
     excerpt: "Explore the fascinating stages of a fly's life and learn why understanding their lifecycle is crucial for effective control.",
     content: (
       <>
-        <h2 className="text-2xl font-bold mb-4 text-yellow-400">Fly Life Cycle: From Egg to Annoyance</h2>
         <p className="text-gray-300 mb-4">
           Ever wonder how that pesky fly buzzing around your kitchen came to be? Let's dive into the life cycle of a fly and see how these tiny terrors go from egg to airborne menace.
         </p>
@@ -574,7 +565,6 @@ const blogPosts = [
     excerpt: "Uncover the surprising cognitive abilities of flies and learn why they're more than just simple pests.",
     content: (
       <>
-        <h2 className="text-2xl font-bold mb-4 text-yellow-400">Fly Intelligence: How Smart Are These Pests?</h2>
         <p className="text-gray-300 mb-4">
           We often think of flies as simple, annoying creatures. But recent research suggests these tiny insects might be smarter than we give them credit for. Let's explore the fascinating world of fly intelligence.
         </p>
@@ -613,7 +603,6 @@ const blogPosts = [
     excerpt: "Discover the extraordinary sensory world of flies and how their unique abilities help them thrive.",
     content: (
       <>
-        <h2 className="text-2xl font-bold mb-4 text-yellow-400">Fly Senses: More Than Meets the Compound Eye</h2>
         <p className="text-gray-300 mb-4">
           Flies might seem simple, but they possess a complex array of senses that help them navigate their world with remarkable efficiency. Let's explore the sensory superpowers of these tiny creatures.
         </p>
@@ -656,7 +645,6 @@ const blogPosts = [
     excerpt: "Discover effective, eco-friendly ways to keep flies at bay using natural repellents.",
     content: (
       <>
-        <h2 className="text-2xl font-bold mb-4 text-yellow-400">Natural Fly Repellents: Harnessing Nature's Defense</h2>
         <p className="text-gray-300 mb-4">
           Looking for a way to keep flies away without resorting to harsh chemicals? Nature has provided us with a variety of effective fly repellents. Let's explore some natural ways to defend your space against these pesky insects.
         </p>

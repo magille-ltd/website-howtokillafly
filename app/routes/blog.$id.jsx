@@ -3,7 +3,7 @@ import { useParams, Link } from '@remix-run/react';
 import blogPosts from '../blogPosts';
 import ContentContainer from '../components/ContentContainer';
 import PrevNextNavigation from '../components/PrevNextNavigation';
-
+import GradientText from '../components/GradientText';
 export default function BlogPost() {
   const { id } = useParams();
   const currentPostIndex = blogPosts.findIndex((post) => post.id === id);
@@ -21,7 +21,10 @@ export default function BlogPost() {
       <Link to="/blog" className="text-yellow-400 hover:underline mb-4 inline-block">
         &larr; Back to Blog
       </Link>
+
+      
       <ContentContainer itemType="blog" itemId={post.id}>
+        <GradientText style="default"><h2 className="text-2xl font-bold mb-4 text-yellow-400 drop-shadow-lg font-military">{post.title}</h2></GradientText>
         {post.content}
       </ContentContainer>
 

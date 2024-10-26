@@ -31,6 +31,8 @@ export function Document({ children }) {
         <Meta />
         <Links />
         <link rel="icon" href="/ffavicon.png" type="image/png" />
+        <script defer data-domain="howtokillafly.com" src="https://plausible.io/js/script.outbound-links.js"></script>
+        <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
       </head>
       <body
         className="flex flex-col items-center justify-start text-white min-h-screen"

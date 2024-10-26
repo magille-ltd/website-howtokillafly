@@ -1,40 +1,58 @@
-# Welcome to Remix!
+# Fly Control Strategy Blog
 
-- 📖 [Remix docs](https://remix.run/docs)
+## Project purpose
 
-## Development
+This is a directory and blog about fly control strategies. Purpose is to help educate people about flies and how to control them.
 
-Run the dev server:
+## Project status
 
-```shellscript
-npm run dev
-```
+MVP with voting system in progress.
 
-## Deployment
+## Project stack
 
-First, build your app for production:
+- Remix
+- Tailwind CSS
+- MongoDB (for storing votes)
+- Mongoose (for database interaction)
 
-```sh
-npm run build
-```
+## Development plan
 
-Then run the app in production mode:
+- [x] Create initial MVP
+- [ ] Implement voting system (in progress)
+  - Set up MongoDB and Mongoose
+  - Create Vote model
+  - Implement voting API
+  - Add fly icon for voting UI
+- [ ] Let people comment on strategies
+- [ ] Let people comment on blog posts
+- [ ] Let people submit pictures of flies they've caught
 
-```sh
-npm start
-```
+## Voting System Implementation (Current Focus)
 
-Now you'll need to pick a host to deploy it to.
+1. Database Integration (MongoDB and Mongoose)
+   - Set up MongoDB Atlas cluster
+   - Install Mongoose in the project
+   - Create Mongoose schema for votes
+   - Implement voting API endpoint
 
-### DIY
+2. User Voting System
+   - Create a Vote model in Mongoose
+   - Implement voting API endpoint (increment/decrement vote count)
+   - Add voting UI component (fly icon) to strategy pages
+   - Update strategy display to include vote counts
+   - Allow multiple votes per strategy (no user authentication required)
 
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
+3. UI/UX for Voting
+   - Design and implement a fly icon for voting
+   - Add click animation for vote interaction
+   - Display vote count next to each strategy
 
-Make sure to deploy the output of `npm run build`
+4. Testing and Quality Assurance
+   - Write unit tests for the Vote model and API endpoint
+   - Perform thorough testing of the voting feature
 
-- `build/server`
-- `build/client`
+5. Deployment and Monitoring
+   - Update deployment scripts to include MongoDB connection
+   - Set up monitoring for the voting system
 
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+Next steps after voting system implementation will be determined based on project priorities.

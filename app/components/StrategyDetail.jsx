@@ -1,6 +1,7 @@
 import { Link } from "@remix-run/react";
 import VoteButton from "./VoteButton";
 import GradientText from "./GradientText";
+
 export default function StrategyDetail({ strategy }) {
   return (
     <div className="text-left">
@@ -9,9 +10,20 @@ export default function StrategyDetail({ strategy }) {
         {/* <VoteButton id={strategy.id} type="strategy" /> Do not remove this component, it may be needed in the future */}
       </div>
       <p className="text-2xl mb-6 text-gray-300">{strategy.description}</p>
-      {strategy.content}
+      <div className="strategy-content">
+        {strategy.content}
+      </div>
       
       <Link to="/" className="text-blue-500 hover:underline mt-4 text-lg inline-block mt-8 font-military">Back to Index</Link>
+
+      <style jsx>{`
+        .strategy-content img {
+          max-width: 50%;
+          height: auto;
+          margin: 1rem auto;
+          display: block;
+        }
+      `}</style>
     </div>
   );
 }

@@ -4,6 +4,32 @@ import blogPosts from '../blogPosts';
 import ContentContainer from '../components/ContentContainer';
 import PrevNextNavigation from '../components/PrevNextNavigation';
 import GradientText from '../components/GradientText';
+
+export const meta = ({ data }) => {
+  if (!data || !data.post) {
+    return [
+      { title: "Blog Post Not Found" },
+      { name: "description", content: "The requested blog post could not be found." },
+    ];
+  }
+
+  return [
+    { title: `${data.post.title} - Fly Elimination Blog` },
+    { name: "description", content: data.post.excerpt },
+  ];
+};
+
+export const loader = async ({ params }) => {
+  const post = blogPosts.find(post => post.id === params.id);
+  
+  if (!post) {
+    throw new Response("Not Found", { status: 404 });
+  }
+
+  return { post };
+};
+
+
 export default function BlogPost() {
   const { id } = useParams();
   const currentPostIndex = blogPosts.findIndex((post) => post.id === id);

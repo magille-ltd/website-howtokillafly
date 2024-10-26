@@ -1,9 +1,11 @@
 import React from 'react';
 
-export default function SectionHeader({ children }) {
+const SectionHeader = ({ children, className = '' }) => {
   return (
-    <h2 className="text-2xl font-bold mb-4 text-yellow-400 text-center">
+    <h2 className={`text-3xl font-military text-yellow-400 mb-4 text-center ${className}`}>
       {children}
     </h2>
   );
-}
+};
+
+export default SectionHeader;

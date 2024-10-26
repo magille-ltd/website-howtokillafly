@@ -1,6 +1,7 @@
 import { Link, useLocation } from "@remix-run/react";
 import SocialShare from './SocialShare';
 import ReactionComponent from './ReactionComponent';
+import SectionHeader from './SectionHeader';
 
 export default function Layout({ children }) {
   const location = useLocation();
@@ -8,10 +9,10 @@ export default function Layout({ children }) {
   return (
     <div className="flex flex-col justify-center min-h-screen px-4 py-6">
       <div className="text-center py-8 max-w-3xl mx-auto">
-        <h1 className="text-5xl font-extrabold mb-8 text-yellow-400 drop-shadow-lg">
+        <h1 className="text-5xl font-military mb-8 text-yellow-400 drop-shadow-lg">
           <Link to="/" className="hover:underline">🪰🔥 Tactical Fly Elimination Directory</Link>
         </h1>
-        <p className="text-2xl mb-6 text-gray-300">
+        <p className="text-2xl mb-6 text-gray-300 font-military">
           Welcome to your ultimate guide for outsmarting and obliterating that pesky f* with style and a smile.
         </p>
       </div>

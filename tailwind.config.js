@@ -14,6 +14,7 @@ export default {
           '"Noto Color Emoji"',
         ],
         'digital': ['VT323', 'monospace'],
+        'military': ['"Black Ops One"', 'cursive'],
       },
       colors: {
         'khaki': {

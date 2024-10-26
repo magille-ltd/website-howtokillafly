@@ -4,6 +4,7 @@ import BlogSection from '../components/BlogSection';
 import LearnMoreSection from '../components/LearnMoreSection';
 import SectionHeader from '../components/SectionHeader';
 import StrategySection from '../components/StrategySection';
+import VisitorCounter from '../components/VisitorCounter';
 
 export const meta = () => {
   return [
@@ -14,7 +15,10 @@ export const meta = () => {
 
 export default function Index() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-0">
+      <div className="mb-16 text-center">
+        <VisitorCounter />
+      </div>
       
       <section className="mb-8">
         <SectionHeader>Fly Elimination Strategies</SectionHeader>

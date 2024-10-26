@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useFetcher } from '@remix-run/react';
-import { ReactionType } from '~/constants/reactionTypes';
+import { ReactionType, ReactionEmoji } from '~/constants/reactionTypes';
 
-const ReactionComponent = ({ itemType, itemId }) => {
+const ReactionComponent = ({ itemType, itemId, enabledReactions }) => {
   const [reactions, setReactions] = useState([]);
   const [localReactions, setLocalReactions] = useState({});
   const fetcher = useFetcher();
@@ -34,16 +34,11 @@ const ReactionComponent = ({ itemType, itemId }) => {
   };
 
   const getEmojiForReaction = (type) => {
-    const emojiMap = {
-      like: '👍', love: '❤️', laugh: '😂', wow: '😮', sad: '😢', angry: '😠',
-      thoughtful: '🤔', confused: '😕', fly: '🪰', fire: '🔥', clap: '👏',
-      genius: '🧠', inspiring: '💡', mind_blown: '🤯', curious: '🧐',
-      celebrate: '🎉', thanks: '🙏', cool: '😎', skeptical: '🤨'
-    };
-    return emojiMap[type] || '❓';
+    return ReactionEmoji[type] || '❓';
   };
 
-  const enabledReactions = [
+  // Use the passed enabledReactions prop, or fallback to a default set if not provided
+  const reactionsToShow = enabledReactions || [
     ReactionType.LIKE,
     ReactionType.LOVE,
     ReactionType.LAUGH,
@@ -57,7 +52,7 @@ const ReactionComponent = ({ itemType, itemId }) => {
 
   return (
     <div className="flex flex-wrap gap-2">
-      {enabledReactions.map((type) => {
+      {reactionsToShow.map((type) => {
         const serverCount = reactions.find(r => r.type === type)?.count || 0;
         const localCount = localReactions[type] || 0;
         const totalCount = serverCount + localCount;

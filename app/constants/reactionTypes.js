@@ -17,5 +17,27 @@ export const ReactionType = {
   CELEBRATE: 'celebrate',
   THANKS: 'thanks',
   COOL: 'cool',
-  SKEPTICAL: 'skeptical',
+  SKEPTICAL: 'skeptical'
+};
+
+export const ReactionEmoji = {
+  [ReactionType.LIKE]: '👍',
+  [ReactionType.LOVE]: '❤️',
+  [ReactionType.LAUGH]: '😂',
+  [ReactionType.WOW]: '😮',
+  [ReactionType.SAD]: '😢',
+  [ReactionType.ANGRY]: '😠',
+  [ReactionType.THOUGHTFUL]: '🤔',
+  [ReactionType.CONFUSED]: '😕',
+  [ReactionType.FLY]: '🪰',
+  [ReactionType.FIRE]: '🔥',
+  [ReactionType.CLAP]: '👏',
+  [ReactionType.GENIUS]: '🧠',
+  [ReactionType.INSPIRING]: '💡',
+  [ReactionType.MIND_BLOWN]: '🤯',
+  [ReactionType.CURIOUS]: '🧐',
+  [ReactionType.CELEBRATE]: '🎉',
+  [ReactionType.THANKS]: '🙏',
+  [ReactionType.COOL]: '😎',
+  [ReactionType.SKEPTICAL]: '🤨'
 };

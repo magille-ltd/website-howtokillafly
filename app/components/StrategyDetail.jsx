@@ -6,7 +6,7 @@ export default function StrategyDetail({ strategy }) {
     <div className="text-left py-8">
       <div className="flex items-center justify-between mb-8">
         <h2 className="text-5xl font-extrabold text-yellow-400 drop-shadow-lg">{strategy.name}</h2>
-        <VoteButton id={strategy.id} type="strategy" />
+        {/* <VoteButton id={strategy.id} type="strategy" /> Do not remove this component, it may be needed in the future */}
       </div>
       <p className="text-2xl mb-6 text-gray-300">{strategy.description}</p>
       {strategy.content}

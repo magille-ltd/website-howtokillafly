@@ -32,8 +32,8 @@ export default function Layout({ children }) {
 
       <SocialShare />
       <div className="text-center py-8 max-w-3xl mx-auto mt-8">
-        <p className="text-2xl mb-6 text-gray-300">
-          &copy; {new Date().getFullYear()} Tactical Fly Elimination Directory. All rights reserved.
+        <p className="text-2xl mb-6 text-gray-300 font-military ">
+          &copy; {new Date().getFullYear()} Tactical Fly Elimination Directory.<br/>All rights reserved.
         </p>
       </div>
     </div>

@@ -18,9 +18,11 @@ export default function Layout({ children }) {
       
       {children}
 
-      <div className="mt-8 mb-4 text-center mx-auto">
-        <ReactionComponent itemType="page" itemId={location.pathname} />
-      </div>
+      {location.pathname === '/' && (
+        <div className="mt-8 mb-4 text-center mx-auto">
+          <ReactionComponent itemType="page" itemId={location.pathname} />
+        </div>
+      )}
 
       <SocialShare />
       <div className="text-center py-8 max-w-3xl mx-auto">

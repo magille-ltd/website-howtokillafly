@@ -21,7 +21,7 @@ export default function BlogPost() {
       <Link to="/blog" className="text-yellow-400 hover:underline mb-4 inline-block">
         &larr; Back to Blog
       </Link>
-      <ContentContainer>
+      <ContentContainer itemType="blog" itemId={post.id}>
         {post.content}
       </ContentContainer>
 

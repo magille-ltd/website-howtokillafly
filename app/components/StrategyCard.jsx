@@ -7,6 +7,11 @@ export default function StrategyCard({ strategy }) {
         {strategy.hot && (
           <span className="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">HOT</span>
         )}
+        {strategy.topReactionEmoji && (
+          <span className="absolute top-2 right-2 text-2xl" title="Top reaction">
+            {strategy.topReactionEmoji}
+          </span>
+        )}
         <h2 className="text-xl mb-2 font-extrabold text-yellow-400">{strategy.name}</h2>
         <p className="text-gray-300 flex-grow">{strategy.description}</p>
       </div>

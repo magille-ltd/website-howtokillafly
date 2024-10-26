@@ -1,11 +1,9 @@
 import React from 'react';
-import flyEliminationStrategies from '../flyStrategies';
 import Testimonials from '../components/Testimonials';
-import StrategyGrid from '../components/StrategyGrid';
-import StrategyContainer from '../components/StrategyContainer';
 import BlogSection from '../components/BlogSection';
 import LearnMoreSection from '../components/LearnMoreSection';
 import SectionHeader from '../components/SectionHeader';
+import StrategySection from '../components/StrategySection';
 
 export const meta = () => {
   return [
@@ -20,9 +18,7 @@ export default function Index() {
       
       <section className="mb-8">
         <SectionHeader>Fly Elimination Strategies</SectionHeader>
-        <StrategyContainer>
-          <StrategyGrid strategies={flyEliminationStrategies} />
-        </StrategyContainer>
+        <StrategySection />
       </section>
       
       <section className="mb-12 max-w-4xl mx-auto">

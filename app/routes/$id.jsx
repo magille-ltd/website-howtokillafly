@@ -45,7 +45,7 @@ export default function StrategyDetailPage() {
       <Link to="/" className="text-yellow-400 hover:underline mb-4 inline-block">
         &larr; Back to Strategies
       </Link>
-      <ContentContainer>
+      <ContentContainer itemType="strategy" itemId={strategy.id}>
         <StrategyDetail strategy={strategy} />
       </ContentContainer>
 

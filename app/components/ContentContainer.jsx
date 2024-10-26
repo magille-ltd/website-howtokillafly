@@ -10,14 +10,14 @@ export default function ContentContainer({ children, itemType, itemId }) {
 
   return (
     <div className="bg-gray-800 rounded-lg shadow-md p-6 mb-8 relative">
-      <div className="absolute top-2 right-2">
+      <div className="md:absolute md:top-2 md:right-2 static mt-2 flex justify-center">
         <ReactionComponent 
           itemType={itemType}
           itemId={itemId}
           enabledReactions={selectedReactions} 
         />
       </div>
-      <div className="text-left">
+      <div className="text-left pt-8 lg:pt-0">
         {children}
       </div>
     </div>

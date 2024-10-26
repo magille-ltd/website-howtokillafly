@@ -20,17 +20,17 @@ export default function Index() {
         <VisitorCounter />
       </div>
       
-      <section className="mb-8">
+      <section className="mb-16">
         <SectionHeader>Fly Elimination Strategies</SectionHeader>
         <StrategySection />
       </section>
       
-      <section className="mb-12 max-w-4xl mx-auto">
+      <section className="mb-16 max-w-4xl mx-auto">
         <SectionHeader>Latest from the Blog</SectionHeader>
         <BlogSection />
       </section>
 
-      <section className="mb-8">
+      <section className="mb-16">
         <SectionHeader>Buzz from the Battlefield</SectionHeader>
         <Testimonials />
       </section>

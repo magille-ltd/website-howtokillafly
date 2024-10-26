@@ -1,6 +1,8 @@
 import React from 'react';
 import { useParams, Link } from '@remix-run/react';
 import blogPosts from '../blogPosts';
+import ContentContainer from '../components/ContentContainer';
+import PrevNextNavigation from '../components/PrevNextNavigation';
 
 export default function BlogPost() {
   const { id } = useParams();
@@ -19,34 +21,11 @@ export default function BlogPost() {
       <Link to="/blog" className="text-yellow-400 hover:underline mb-4 inline-block">
         &larr; Back to Blog
       </Link>
-      <article className="bg-gray-800 rounded-lg shadow-md p-6 mb-8">
+      <ContentContainer>
         {post.content}
-      </article>
+      </ContentContainer>
 
-      <div className="grid grid-cols-2 gap-4">
-        <div>
-          {prevPost && (
-            <Link to={`/blog/${prevPost.id}`} className="bg-gray-800 rounded-lg shadow-md p-4 hover:bg-gray-700 transition-colors flex items-center h-full w-full">
-              <div className="mr-4 text-yellow-400 text-2xl">&larr;</div>
-              <div>
-                <h3 className="text-lg font-semibold text-yellow-400 mb-2">Previous Post</h3>
-                <p className="text-white">{prevPost.title}</p>
-              </div>
-            </Link>
-          )}
-        </div>
-        <div>
-          {nextPost && (
-            <Link to={`/blog/${nextPost.id}`} className="bg-gray-800 rounded-lg shadow-md p-4 hover:bg-gray-700 transition-colors flex items-center justify-end h-full w-full">
-              <div className="text-right">
-                <h3 className="text-lg font-semibold text-yellow-400 mb-2">Next Post</h3>
-                <p className="text-white">{nextPost.title}</p>
-              </div>
-              <div className="ml-4 text-yellow-400 text-2xl">&rarr;</div>
-            </Link>
-          )}
-        </div>
-      </div>
+      <PrevNextNavigation prevItem={prevPost} nextItem={nextPost} basePath="blog" />
     </div>
   );
 }

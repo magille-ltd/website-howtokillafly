@@ -1,7 +1,9 @@
-import { useLoaderData } from "@remix-run/react";
+import React from 'react';
+import { useLoaderData, Link } from "@remix-run/react";
 import flyEliminationStrategies from '../flyStrategies';
-import StrategyContainer from '../components/StrategyContainer';
 import StrategyDetail from '../components/StrategyDetail';
+import ContentContainer from '../components/ContentContainer';
+import PrevNextNavigation from '../components/PrevNextNavigation';
 
 export const meta = ({ data }) => {
   if (!data || !data.strategy) {
@@ -18,25 +20,40 @@ export const meta = ({ data }) => {
 };
 
 export const loader = async ({ params }) => {
-  const strategy = flyEliminationStrategies.find(s => s.id === params.id);
+  const strategyIndex = flyEliminationStrategies.findIndex(s => s.id === params.id);
+  const strategy = flyEliminationStrategies[strategyIndex];
   
   if (!strategy) {
     throw new Response("Not Found", { status: 404 });
   }
 
-  return { strategy };
+  const prevStrategy = strategyIndex > 0 ? flyEliminationStrategies[strategyIndex - 1] : null;
+  const nextStrategy = strategyIndex < flyEliminationStrategies.length - 1 ? flyEliminationStrategies[strategyIndex + 1] : null;
+
+  return { strategy, prevStrategy, nextStrategy };
 };
 
 export default function StrategyDetailPage() {
-  const { strategy } = useLoaderData();
+  const { strategy, prevStrategy, nextStrategy } = useLoaderData();
 
   if (!strategy) {
     return <div>Strategy not found</div>;
   }
 
   return (
-    <StrategyContainer>
-      <StrategyDetail strategy={strategy} />
-    </StrategyContainer>
+    <div className="container mx-auto px-4 py-8">
+      <Link to="/" className="text-yellow-400 hover:underline mb-4 inline-block">
+        &larr; Back to Strategies
+      </Link>
+      <ContentContainer>
+        <StrategyDetail strategy={strategy} />
+      </ContentContainer>
+
+      <PrevNextNavigation 
+        prevItem={prevStrategy} 
+        nextItem={nextStrategy} 
+        basePath="" 
+      />
+    </div>
   );
 }

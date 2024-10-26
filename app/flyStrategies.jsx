@@ -1,5 +1,4 @@
 // for inspiration: https://en.wikipedia.org/wiki/Fly-killing_device
-
 import React from 'react';
 
 const flyEliminationStrategies = [

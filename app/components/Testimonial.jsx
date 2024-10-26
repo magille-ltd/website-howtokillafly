@@ -1,13 +1,14 @@
 import StarRating from './StarRating';
 import ReactionComponent from './ReactionComponent';
 import { ReactionType } from '~/constants/reactionTypes';
+import GradientBackground from './GradientBackground';
 
 export default function Testimonial({ rating, content, author, reply, id }) {
   const enabledReactions = [ReactionType.LIKE, ReactionType.DISLIKE];
 
   return (
-    <div className="bg-gray-800 bg-opacity-75 p-6 rounded-lg text-left relative">
-      <div className="absolute top-3 right-3">
+    <GradientBackground className="bg-gray-800 p-6 rounded-lg text-left">
+      <div className="absolute top-0 right-0">
         <ReactionComponent 
           itemType="testimonial" 
           itemId={id} 
@@ -24,6 +25,6 @@ export default function Testimonial({ rating, content, author, reply, id }) {
           <p className="text-gray-300">{reply}</p>
         </div>
       )}
-    </div>
+    </GradientBackground>
   );
 }

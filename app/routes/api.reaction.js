@@ -20,32 +20,37 @@ export async function action({ request }) {
   }
 
   try {
-    let reaction = await Reaction.findOne({ itemType, itemId });
-    console.log('Existing reaction:', reaction);
+    // Attempt to update first
+    const updateResult = await Reaction.updateOne(
+      { itemType, itemId, 'reactions.type': reactionType },
+      { $inc: { 'reactions.$.count': 1 } }
+    );
 
-    if (!reaction) {
-      console.log('Creating new reaction document');
-      reaction = new Reaction({
-        itemType,
-        itemId,
-        reactions: [{ type: reactionType, count: 1 }]
-      });
-    } else {
-      console.log('Updating existing reaction document');
-      const existingReaction = reaction.reactions.find(r => r.type === reactionType);
+    if (updateResult.matchedCount === 0) {
+      // If no document was updated, check if it exists
+      const existingReaction = await Reaction.findOne({ itemType, itemId });
+
       if (existingReaction) {
-        console.log('Incrementing existing reaction count');
-        existingReaction.count += 1;
+        // Document exists, but doesn't have this reaction type yet
+        await Reaction.updateOne(
+          { itemType, itemId },
+          { $push: { reactions: { type: reactionType, count: 1 } } }
+        );
       } else {
-        console.log('Adding new reaction type');
-        reaction.reactions.push({ type: reactionType, count: 1 });
+        // Document doesn't exist, create a new one
+        await Reaction.create({
+          itemType,
+          itemId,
+          reactions: [{ type: reactionType, count: 1 }]
+        });
       }
     }
 
-    await reaction.save();
-    console.log('Saved reaction:', reaction);
+    // Fetch the updated document
+    const updatedReaction = await Reaction.findOne({ itemType, itemId });
+    console.log('Updated reaction:', updatedReaction);
 
-    return json({ success: true, reaction });
+    return json({ success: true, reaction: updatedReaction });
   } catch (error) {
     console.error('Error updating reaction:', error);
     return json({ error: 'Failed to update reaction' }, { status: 500 });

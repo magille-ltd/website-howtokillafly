@@ -5,12 +5,12 @@ import GradientBackground from './GradientBackground';
 export default function StrategyCard({ strategy }) {
   return (
     <Link to={`/${strategy.id}`} className="block h-full">
-      <GradientBackground className="h-full border border-yellow-400 p-4 rounded-md bg-gray-800 bg-opacity-75 hover:bg-opacity-100 transition duration-300 ease-in-out transform hover:scale-105 flex flex-col relative">
+      <GradientBackground className="h-full border border-yellow-400 p-6 rounded-md bg-gray-800 bg-opacity-75 hover:bg-opacity-100 transition duration-300 ease-in-out transform hover:scale-105 flex flex-col relative">
         {strategy.hot && false && (
           <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">HOT</span>
         )}
         {strategy.topReactionEmoji && (
-          <span className="absolute -top-1 -right-1 text-2xl" title="Top reaction">
+          <span className="absolute -top-1 -right-1 text-xl" title="Top reaction">
             <GradientText style="emoji">{strategy.topReactionEmoji}</GradientText>
           </span>
         )}

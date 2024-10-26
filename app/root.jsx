@@ -4,6 +4,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLoaderData,
 } from "@remix-run/react";
 import { Analytics } from "@vercel/analytics/react"
 import Layout from './components/Layout';
@@ -22,7 +23,15 @@ export const links = () => [
   },
 ];
 
+export const loader = () => {
+  return {
+    isProduction: process.env.NODE_ENV === "production",
+  };
+};
+
 export function Document({ children }) {
+  const { isProduction } = useLoaderData();
+
   return (
     <html lang="en">
       <head>
@@ -31,8 +40,15 @@ export function Document({ children }) {
         <Meta />
         <Links />
         <link rel="icon" href="/ffavicon.png" type="image/png" />
-        <script defer data-domain="howtokillafly.com" src="https://plausible.io/js/script.outbound-links.js"></script>
-        <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+        
+        {isProduction && (
+          <>
+            <script defer data-domain="howtokillafly.com" src="https://plausible.io/js/script.outbound-links.js"></script>
+            <script dangerouslySetInnerHTML={{__html: `
+              window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }
+            `}} />
+          </>
+        )}
       </head>
       <body
         className="flex flex-col items-center justify-start text-white min-h-screen"
@@ -51,6 +67,7 @@ export function Document({ children }) {
     </html>
   );
 }
+
 export default function App() {
   return (
     <Document>

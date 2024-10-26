@@ -13,12 +13,12 @@ export default function Layout({ children }) {
           <Link to="/">
             <span className="text-5xl">🪰🔥</span><br/>
             <h1 className="">
-              <GradientText>Tactical Fly Elimination Guidance Computer</GradientText>
+              <GradientText>Tactical Fly Elimination Directory</GradientText>
             </h1>
           </Link>
         </div>
         <p className="text-2xl mb-6 text-gray-300 font-military">
-          Your ultimate guide for outsmarting and obliterating that pesky mother f* with style and a smile. Before it gets to land on your face during the night.
+          Your ultimate guide for outsmarting and obliterating that pesky mother f* with style and a smile &mdash; Before it gets to land on your face during the night.
         </p>
       </div>
       

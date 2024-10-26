@@ -6,6 +6,9 @@ export async function action({ request }) {
   const formData = await request.formData();
   const itemId = formData.get('id');
   const itemType = formData.get('type');
+  if (typeof itemId !== 'string' || typeof itemType !== 'string') {
+    throw new Error('Invalid input: id and type must be strings');
+  }
   const increment = formData.get('increment') === 'true';
 
   await connect();

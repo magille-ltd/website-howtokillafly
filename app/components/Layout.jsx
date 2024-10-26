@@ -8,18 +8,20 @@ export default function Layout({ children }) {
 
   return (
     <div className="flex flex-col justify-center min-h-screen px-4 py-6">
-      <div className="text-center py-8 max-w-3xl mx-auto">
-        <div className="text-5xl font-military mb-8 text-yellow-400 drop-shadow-lg">
+      <div className={`text-center py-8 max-w-3xl mx-auto`}>
+        <div className={`${location.pathname === '/' ? 'text-5xl mb-8' : 'text-4xl'} font-military text-yellow-400 drop-shadow-lg`}>
           <Link to="/">
-            <span className="text-5xl">🪰🔥</span><br/>
+            <span className={`${location.pathname === '/' ? 'text-5xl' : 'text-4xl'}`}>🪰🔥</span><br/>
             <h1 className="">
               <GradientText>Tactical Fly Elimination Directory</GradientText>
             </h1>
           </Link>
         </div>
-        <p className="text-2xl mb-6 text-gray-300 font-military">
-          Your ultimate guide for outsmarting and obliterating that pesky mother f* with style and a smile &mdash; Before it gets to land on your face during the night.
-        </p>
+        {location.pathname === '/' && (
+          <p className="text-2xl mb-6 text-gray-300 font-military">
+            Your ultimate guide for outsmarting and obliterating that pesky mother f* with style and a smile &mdash; Before it gets to land on your face during the night.
+          </p>
+        )}
       </div>
       
       {children}

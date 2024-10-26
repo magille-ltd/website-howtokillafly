@@ -1,7 +1,7 @@
 import { Link, useLocation } from "@remix-run/react";
 import SocialShare from './SocialShare';
 import ReactionComponent from './ReactionComponent';
-import SectionHeader from './SectionHeader';
+import GradientText from './GradientText';
 
 export default function Layout({ children }) {
   const location = useLocation();
@@ -9,11 +9,16 @@ export default function Layout({ children }) {
   return (
     <div className="flex flex-col justify-center min-h-screen px-4 py-6">
       <div className="text-center py-8 max-w-3xl mx-auto">
-        <h1 className="text-5xl font-military mb-8 text-yellow-400 drop-shadow-lg">
-          <Link to="/" className="hover:underline">🪰🔥<br/>Tactical Fly Elimination Directory</Link>
-        </h1>
+        <div className="text-5xl font-military mb-8 text-yellow-400 drop-shadow-lg">
+          <Link to="/">
+            🪰🔥<br/>
+            <h1 className="">
+              <GradientText>Tactical Fly Elimination Directory</GradientText>
+            </h1>
+          </Link>
+        </div>
         <p className="text-2xl mb-6 text-gray-300 font-military">
-          Welcome to your ultimate guide for outsmarting and obliterating that pesky f* with style and a smile.
+          Your ultimate guide for outsmarting and obliterating that pesky mother f* with style and a smile.
         </p>
       </div>
       
@@ -26,7 +31,7 @@ export default function Layout({ children }) {
       )}
 
       <SocialShare />
-      <div className="text-center py-8 max-w-3xl mx-auto">
+      <div className="text-center py-8 max-w-3xl mx-auto mt-8">
         <p className="text-2xl mb-6 text-gray-300">
           &copy; {new Date().getFullYear()} Tactical Fly Elimination Directory. All rights reserved.
         </p>

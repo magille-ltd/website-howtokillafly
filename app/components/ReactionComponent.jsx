@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useFetcher } from '@remix-run/react';
 import { ReactionType, ReactionEmoji } from '~/constants/reactionTypes';
-
+import GradientText from './GradientText';
 const ReactionComponent = ({ itemType, itemId, enabledReactions, style = 'default' }) => {
   const [reactions, setReactions] = useState([]);
   const [localReactions, setLocalReactions] = useState({});
@@ -67,25 +67,27 @@ const ReactionComponent = ({ itemType, itemId, enabledReactions, style = 'defaul
         const minimalHoverClass = isZeroCount ? 'hover:opacity-50' : 'hover:opacity-80';
 
         return (
-          <button
-            key={type}
-            onClick={() => handleReaction(type)}
-            className={`flex items-center ${
-              style === 'minimal'
-                ? `text-gray-400 ${minimalOpacityClass} ${minimalHoverClass}`
-                : 'flex-col p-2 border-none border-gray-300 rounded-lg hover:bg-gray-800'
-            } transition-colors duration-200`}
-            title={type.charAt(0).toUpperCase() + type.slice(1)}
-          >
-            <span className={style === 'minimal' ? 'mr-1' : 'text-2xl'}>
-              {getEmojiForReaction(type)}
-            </span>
-            {totalCount > 0 && (
-              <span className={style === 'minimal' ? 'text-xs' : 'text-xs mt-1'}>
-                {totalCount}
+          <GradientText style="emoji">
+            <button
+              key={type}
+              onClick={() => handleReaction(type)}
+              className={`flex items-center ${
+                style === 'minimal'
+                  ? `text-gray-400 ${minimalOpacityClass} ${minimalHoverClass}`
+                  : 'flex-col p-2 border-none border-gray-300 rounded-lg hover:bg-gray-800'
+              } transition-colors duration-200`}
+              title={type.charAt(0).toUpperCase() + type.slice(1)}
+            >
+              <span className={style === 'minimal' ? 'mr-1' : 'text-2xl'}>
+                {getEmojiForReaction(type)}
               </span>
-            )}
-          </button>
+              {totalCount > 0 && (
+                <span className={style === 'minimal' ? 'text-xs' : 'text-xs mt-1'}>
+                  {totalCount}
+                </span>
+              )}
+            </button>
+          </GradientText>
         );
       })}
     </div>

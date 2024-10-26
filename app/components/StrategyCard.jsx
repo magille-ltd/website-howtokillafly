@@ -1,5 +1,5 @@
 import { Link } from "@remix-run/react";
-
+import GradientText from './GradientText';
 export default function StrategyCard({ strategy }) {
   return (
     <Link to={`/${strategy.id}`} className="block h-full">
@@ -9,7 +9,7 @@ export default function StrategyCard({ strategy }) {
         )}
         {strategy.topReactionEmoji && (
           <span className="absolute top-2 right-2 text-2xl" title="Top reaction">
-            {strategy.topReactionEmoji}
+            <GradientText style="emoji">{strategy.topReactionEmoji}</GradientText>
           </span>
         )}
         <h2 className="text-xl mb-2 font-extrabold text-yellow-400">{strategy.name}</h2>

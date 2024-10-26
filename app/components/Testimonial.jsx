@@ -7,7 +7,7 @@ export default function Testimonial({ rating, content, author, reply, id }) {
   const enabledReactions = [ReactionType.LIKE, ReactionType.DISLIKE];
 
   return (
-    <GradientBackground className="bg-gray-800 p-6 rounded-lg text-left">
+    <GradientBackground className="bg-gray-800 p-6 rounded-lg text-left border border-yellow-400">
       <div className="absolute top-0 right-0">
         <ReactionComponent 
           itemType="testimonial" 

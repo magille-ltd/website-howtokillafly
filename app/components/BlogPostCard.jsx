@@ -9,7 +9,7 @@ export default function BlogPostCard({ post, topReaction }) {
 
   return (
     <Link to={`/blog/${post.id}`} className="block h-full">
-      <GradientBackground className="h-full border border-yellow-400 rounded-lg shadow-md p-6 relative bg-gray-800 bg-opacity-75 hover:bg-opacity-100 transition duration-300 ease-in-out transform hover:scale-105 flex flex-col">
+      <GradientBackground className="h-full border border-yellow-400 rounded-lg shadow-md p-4 sm:p-6 relative bg-gray-800 bg-opacity-75 hover:bg-opacity-100 transition duration-300 ease-in-out transform hover:scale-105 flex flex-col">
         {topReactionEmoji && (
           <span className="absolute -top-1 -right-1 text-xl" title="Top reaction">
             <GradientText style="emoji">{topReactionEmoji}</GradientText>

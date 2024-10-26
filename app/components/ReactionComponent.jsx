@@ -74,7 +74,7 @@ const ReactionComponent = ({ itemType, itemId, enabledReactions, style = 'defaul
               className={`flex items-center ${
                 style === 'minimal'
                   ? `text-gray-400 ${minimalOpacityClass} ${minimalHoverClass}`
-                  : 'flex-col p-2 border-none border-gray-300 rounded-lg hover:bg-gray-800'
+                  : 'flex-col py-2 px-1 sm:p-2 border-none border-gray-300 rounded-lg hover:bg-gray-800'
               } transition-colors duration-200`}
               title={type.charAt(0).toUpperCase() + type.slice(1)}
             >

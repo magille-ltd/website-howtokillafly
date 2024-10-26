@@ -1,3 +1,31 @@
+/*
+Instructions for creating new blog posts:
+
+1. Maintain the existing structure for each blog post object:
+   - id: A unique identifier for the post (use kebab-case)
+   - title: An engaging title for the post
+   - excerpt: A brief summary of the post content (1-2 sentences)
+   - content: The full content of the post, wrapped in a React fragment
+
+2. For the content:
+   - Use appropriate heading tags (h2 for the main title, h3 for subsections)
+   - Wrap paragraphs in <p> tags
+   - Use <ul> or <ol> for lists as appropriate
+   - Maintain consistent styling classes for text colors and spacing
+
+3. Ensure all information is factual and accurate. Do not include any speculative or unverified information.
+
+4. Aim for a balance of informative content and engaging, conversational tone where appropriate.
+
+5. Include relevant subheadings to break up the content and improve readability.
+
+6. Add the new post object to the blogPosts array, typically at the end unless specified otherwise.
+
+7. Proofread the content for any errors or inconsistencies before finalizing.
+
+Remember: No speculation, no bullshit - stick to verifiable facts while keeping the content engaging and easy to read.
+*/
+
 import React from 'react';
 
 const blogPosts = [

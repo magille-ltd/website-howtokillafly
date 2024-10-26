@@ -1,5 +1,6 @@
 export const ReactionType = {
   LIKE: 'like',
+  DISLIKE: 'dislike',
   LOVE: 'love',
   LAUGH: 'laugh',
   WOW: 'wow',
@@ -22,6 +23,7 @@ export const ReactionType = {
 
 export const ReactionEmoji = {
   [ReactionType.LIKE]: '👍',
+  [ReactionType.DISLIKE]: '👎',
   [ReactionType.LOVE]: '❤️',
   [ReactionType.LAUGH]: '😂',
   [ReactionType.WOW]: '😮',

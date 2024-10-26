@@ -20,15 +20,15 @@ export default function StrategySection() {
     }
   }, [fetcher.data]);
 
-  console.log({ fetcherData: fetcher.data });
-  console.log({ topReactions });
+  //console.log({ fetcherData: fetcher.data });
+  //console.log({ topReactions });
 
   const strategiesWithReactions = flyEliminationStrategies.map(strategy => ({
     ...strategy,
     topReactionEmoji: topReactions[strategy.id] ? ReactionEmoji[topReactions[strategy.id]] : null,
   }));
 
-  console.log(strategiesWithReactions);
+  //console.log(strategiesWithReactions);
 
   return (
     <StrategyContainer>

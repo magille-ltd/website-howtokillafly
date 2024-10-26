@@ -51,7 +51,7 @@ export function Document({ children }) {
         )}
       </head>
       <body
-        className="flex flex-col items-center justify-start text-white min-h-screen"
+        className="flex flex-col items-center justify-start text-white min-h-screen relative"
         style={{
           backgroundColor: '#273417',
           backgroundImage: 'url(/fly4.png)',
@@ -59,7 +59,16 @@ export function Document({ children }) {
           backgroundBlendMode: 'overlay',
         }}
       >
-        <Layout>{children}</Layout>
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: 'linear-gradient(to bottom right, rgba(50,50,50,0.2), rgba(0,0,0,0.3))',
+            zIndex: 1,
+          }}
+        ></div>
+        <div className="relative z-10 w-full">
+          <Layout>{children}</Layout>
+        </div>
         <ScrollRestoration />
         <Scripts />
         <Analytics />

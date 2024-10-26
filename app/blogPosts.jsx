@@ -3,7 +3,8 @@ Content Map for Future Blog Posts:
 
 1. Fly Biology and Behavior
    - Fly Behavior: Understanding Your Buzzing Nemesis (completed)
-   - Fly Anatomy 101: Getting to Know Our Tiny Nemeses (completed)
+   - Fly Anatomy 101: Getting to Know Your Tiny Nemesis (completed)
+     NOTE: Your Tiny Nemesis. Not Our Tiny Nemeses.
    - Fly Life Cycle: From Egg to Annoyance
    - Fly Intelligence: How Smart Are These Pests?
    - Fly Senses: More Than Meets the Compound Eye
@@ -279,7 +280,7 @@ const blogPosts = [
   },
   {
     id: "fly-anatomy-and-species",
-    title: "Fly Anatomy 101: Getting to Know Our Tiny Nemeses",
+    title: "Fly Anatomy 101: Getting to Know Your Tiny Nemesis",
     excerpt: "Dive into the fascinating world of fly anatomy and explore the diversity of fly species.",
     content: (
       <>

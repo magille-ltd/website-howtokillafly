@@ -25,7 +25,7 @@ export default function Index() {
         <StrategySection />
       </section>
       
-      <section className="mb-16 max-w-4xl mx-auto">
+      <section className="mb-16">
         <SectionHeader>Latest from the Blog</SectionHeader>
         <BlogSection />
       </section>

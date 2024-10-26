@@ -10,11 +10,11 @@ export default function BlogPostCard({ post, topReaction }) {
   return (
     <GradientBackground className="bg-gray-800 rounded-lg shadow-md p-6 relative">
       {topReactionEmoji && (
-        <span className="absolute -top-2 -right-3 text-2xl" title="Top reaction">
+        <span className="absolute -top-0 -right-2 text-2xl" title="Top reaction">
           <GradientText style="emoji">{topReactionEmoji}</GradientText>
         </span>
       )}
-      <h3 className="text-xl font-semibold mb-2 text-yellow-400 mr-1">
+      <h3 className="text-xl font-semibold mb-2 text-yellow-400 mr-7">
         <Link to={`/blog/${post.id}`} className="hover:underline">
           <GradientText style="default">{post.title}</GradientText>
         </Link>

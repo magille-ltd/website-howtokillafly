@@ -6,13 +6,13 @@ export default function PrevNextNavigation({ prevItem, nextItem, basePath }) {
   const getLink = (item) => `/${basePath}${basePath ? '/' : ''}${item.id}`;
 
   return (
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
       {prevItem ? (
         <NavLink to={getLink(prevItem)} direction="prev" title="Previous">
           {getTitle(prevItem)}
         </NavLink>
       ) : (
-        <div></div> // Empty div to maintain grid structure
+        <div className="hidden sm:block"></div> // Hide empty div on small screens
       )}
       {nextItem && (
         <NavLink to={getLink(nextItem)} direction="next" title="Next">

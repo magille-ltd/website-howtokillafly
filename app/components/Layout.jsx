@@ -1,7 +1,10 @@
-import { Link } from "@remix-run/react";
+import { Link, useLocation } from "@remix-run/react";
 import SocialShare from './SocialShare';
+import ReactionComponent from './ReactionComponent';
 
 export default function Layout({ children }) {
+  const location = useLocation();
+
   return (
     <div className="flex flex-col justify-center min-h-screen px-4 py-6">
       <div className="text-center py-8 max-w-3xl mx-auto">
@@ -14,6 +17,10 @@ export default function Layout({ children }) {
       </div>
       
       {children}
+
+      <div className="mt-8 mb-4 text-center mx-auto">
+        <ReactionComponent itemType="page" itemId={location.pathname} />
+      </div>
 
       <SocialShare />
       <div className="text-center py-8 max-w-3xl mx-auto">

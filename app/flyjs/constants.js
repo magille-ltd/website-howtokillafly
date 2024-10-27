@@ -9,9 +9,9 @@ export const FlyState = {
 };
 
 export const CONFIG = {
-  INITIAL_FLIES: 8,
-  INITIAL_SHIT: 8,
-  MAX_FLIES: 200,
+  INITIAL_FLIES: 0,
+  INITIAL_SHIT: 0,
+  MAX_FLIES: 50,
   MAX_SHIT: 50,
   SHIT_RAIN_INTERVAL: 5000,
   FLY_SPEED: 10,

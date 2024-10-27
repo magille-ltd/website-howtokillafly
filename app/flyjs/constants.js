@@ -1,0 +1,27 @@
+export const FlyState = {
+  SAMPLING_SHIT: 'sampling_shit',
+  EATING_SHIT: 'eating_shit',
+  TAKING_OFF: 'taking_off',
+  LANDING: 'landing',
+  FLYING: 'flying',
+  WALKING: 'walking',
+  STUCK: 'stuck'
+};
+
+export const CONFIG = {
+  INITIAL_FLIES: 8,
+  INITIAL_SHIT: 8,
+  MAX_FLIES: 200,
+  MAX_SHIT: 50,
+  SHIT_RAIN_INTERVAL: 5000,
+  FLY_SPEED: 10,
+  FLY_ENERGY_CONSUMPTION: 0.01,
+  SHIT_DECAY_RATE: 0.001,
+  LARVA_GROWTH_RATE: 0.0005,
+  EGG_HATCH_TIME: 100,
+  FLY_LIFESPAN: 10000,
+  MATING_AGE: 1000,
+  MATING_COOLDOWN: 500,
+  EGG_LAYING_RATE: 0.001,
+  MUTATION_RATE: 0.1
+};

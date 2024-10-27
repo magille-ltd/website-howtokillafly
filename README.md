@@ -56,3 +56,6 @@ MVP with voting system in progress.
    - Set up monitoring for the voting system
 
 Next steps after voting system implementation will be determined based on project priorities.
+
+
+SideSideProject: FLY.JS - Add shit and flies to your page.

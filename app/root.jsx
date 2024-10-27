@@ -9,6 +9,8 @@ import {
 import { Analytics } from "@vercel/analytics/react"
 import Layout from './components/Layout';
 import "./tailwind.css";
+import { useEffect, useRef } from 'react';
+import { FlyJS } from './flyjs/flyjs.js';
 
 export const links = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -78,6 +80,26 @@ export function Document({ children }) {
 }
 
 export default function App() {
+  const flyJSRef = useRef(null);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if (!flyJSRef.current) {
+        const container = document.body;
+        flyJSRef.current = new FlyJS(container);
+        console.log('FLYJS START! flyJSRef.current', flyJSRef.current);
+        flyJSRef.current.start();
+      }
+
+      return () => {
+        if (flyJSRef.current) {
+          //console.log('FLYJS STOP! flyJSRef.current', flyJSRef.current);
+          //flyJSRef.current.stop();
+        }
+      };
+    }
+  }, []);
+
   return (
     <Document>
       <Outlet />

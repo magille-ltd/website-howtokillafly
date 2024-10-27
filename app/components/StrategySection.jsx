@@ -28,7 +28,7 @@ export default function StrategySection() {
     topReactionEmoji: topReactions[strategy.id] //? ReactionEmoji[topReactions[strategy.id]] : null,
   }));
 
-  console.log(strategiesWithReactions);
+  //console.log(strategiesWithReactions);
 
   return (
     <StrategyContainer>

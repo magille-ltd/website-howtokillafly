@@ -1,5 +1,4 @@
 import { Link } from "@remix-run/react";
-import VoteButton from "./VoteButton";
 import GradientText from "./GradientText";
 
 export default function StrategyDetail({ strategy }) {
@@ -16,7 +15,7 @@ export default function StrategyDetail({ strategy }) {
       
       <Link to="/" className="text-blue-500 hover:underline mt-4 text-lg inline-block mt-8 font-military">Back to Index</Link>
 
-      <style jsx>{`
+      <style jsx="true">{`
         .strategy-content img {
           max-width: 50%;
           height: auto;

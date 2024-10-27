@@ -25,10 +25,10 @@ export default function StrategySection() {
 
   const strategiesWithReactions = flyEliminationStrategies.map(strategy => ({
     ...strategy,
-    topReactionEmoji: topReactions[strategy.id] ? ReactionEmoji[topReactions[strategy.id]] : null,
+    topReactionEmoji: topReactions[strategy.id] //? ReactionEmoji[topReactions[strategy.id]] : null,
   }));
 
-  //console.log(strategiesWithReactions);
+  console.log(strategiesWithReactions);
 
   return (
     <StrategyContainer>

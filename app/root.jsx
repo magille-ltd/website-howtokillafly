@@ -11,6 +11,7 @@ import Layout from './components/Layout';
 import "./tailwind.css";
 import { useEffect, useRef } from 'react';
 import { FlyJS } from './flyjs/flyjs.js';
+import { SpeedInsights } from '@vercel/speed-insights/remix';
 
 export const links = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -74,6 +75,7 @@ export function Document({ children }) {
         <ScrollRestoration />
         <Scripts />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
